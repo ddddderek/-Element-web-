@@ -1,0 +1,31 @@
+@import '../theme/0000ff/index.css';
+@import '../theme/008000/index.css';
+@import '../theme/00a597/index.css';
+@import '../theme/20a0ff/index.css';
+@import '../theme/fa4f52/index.css';
+
+
+.el-menu {
+	.el-submenu {
+		.el-submenu__title {
+			height:46px;
+			line-height:46px;
+			span {
+				display:inline-block;
+				width:100px;
+				overflow:hidden;
+				text-overflow:ellipsis;
+			}
+		}
+	}
+	.el-menu-item {
+		height:46px;
+		line-height:46px;
+		span {
+			display:inline-block;
+			width:100px;
+			overflow:hidden;
+			text-overflow:ellipsis;
+		}
+	}
+}
