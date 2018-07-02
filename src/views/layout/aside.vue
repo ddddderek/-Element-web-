@@ -1,7 +1,7 @@
 <template>
 	<section id="aside_wrapper">
-		<div class="logo_wrapper">
-			<img class="logo_img" src="/static/images/logo.png" alt="个人logo">
+		<div class="logo_wrapper" :class="menuType?'small_logo':''">
+			<img class="logo_img" :src="menuType?'/static/images/small_logo.png':'/static/images/big_logo.png'" alt="个人logo">
 		</div>
 		<el-menu class="menu_wrapper" :class="menuType?'':'fixedWidth'" :default-active="$route.path" unique-opened router :collapse="menuType" mode="vertical" background-color="#545c64" text-color="#fff" active-text-color="#ffd04b">
 		  	<template v-for="(item,index) in $router.options.routes" v-if="!item.hidden">
@@ -52,8 +52,9 @@
     	overflow-y: auto;
     	overflow-x: hidden;
     	.logo_wrapper {
+    		overflow:hidden;
     		text-align:center;
-    		padding:50px 0px 30px 0px;
+			padding:10px 0px;
     	}
     	.menu_wrapper {
     		border:0px;
