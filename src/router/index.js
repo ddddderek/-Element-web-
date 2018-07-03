@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import home from 'views/home.vue'
+import login from 'views/login.vue'
 
 const table = resolve =>{ require(['views/table/table.vue'], resolve)}
 const chart = resolve =>{ require(['views/chart/chart.vue'], resolve)}
@@ -10,6 +11,11 @@ Vue.use(Router)
 
 export default new Router({
     routes: [
+        {
+            path: '/login',
+            name: '登录页',
+            component: login,
+        },
         {
             path: '/',
             // leaf:true,

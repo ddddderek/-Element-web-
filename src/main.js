@@ -11,7 +11,7 @@ import NProgress from 'nprogress'
 import 'nprogress/nprogress.css'
 
 Vue.config.productionTip = false;
-Vue.use(ElementUI);
+Vue.use(ElementUI, {size:'mini'});
 
 router.beforeEach((to, from, next) => {
 	NProgress.start(); 

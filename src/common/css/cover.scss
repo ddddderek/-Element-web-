@@ -29,3 +29,43 @@
 		}
 	}
 }
+
+.el-form.loginForm.el-form--label-top {
+	.el-form-item.el-form-item--mini {
+		margin-bottom:12px;
+		.el-form-item__label {
+			padding:0px;
+			font-size:14px;
+			color:#fff;
+			line-height:14px;
+			&::before {
+				display:none;
+			}
+		}
+		.el-form-item__content {
+			width:180px;
+			height:20px;
+			line-height:20px;	
+			.el-input.el-input--mini {
+				position: relative;
+				width:100%;
+				height:20px;
+				line-height:20px;	
+				input {
+					height:20px;
+					line-height:20px;	
+					border-radius:10px;
+				}
+			}
+			.el-form-item__error {
+				position: absolute;
+				top: 0px;
+			    left: 200px;
+			    width: 100px;
+			   	height: 20px;
+			    line-height: 25px;
+			    padding: 0px;
+			}
+		}
+	}
+}
