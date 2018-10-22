@@ -18,12 +18,16 @@
 </template>
 
 <script>
+	import {
+		signin
+	} from 'api/user.js'
+
 	export default {
 		data() {
 			return {
 				formData: {
-					username:'',
-					password:'',
+					username:'derek@163.com',
+					password:'123456',
 					remember:true,
 				},
 
@@ -34,6 +38,16 @@
 			}
 		},
 		methods: {
+			//登录接口
+			getSignin (params) {
+				signin (params).then(res => {
+
+				}).catch(err => {
+
+				})	
+			},
+
+			//确认登录按钮
 			handleLogin() {
 				this.$refs['formData'].validate((valid) => {
 					if(valid) {

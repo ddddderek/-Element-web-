@@ -3,7 +3,7 @@
 		<div class="logo_wrapper" :class="menuType?'small_logo':''">
 			<img class="logo_img" :src="menuType?'/static/images/small_logo.png':'/static/images/big_logo.png'" alt="个人logo">
 		</div>
-		<el-menu class="menu_wrapper" :class="menuType?'':'fixedWidth'" :default-active="$route.path" unique-opened router :collapse="menuType" mode="vertical" background-color="#545c64" text-color="#fff" active-text-color="#ffd04b">
+		<el-menu class="menu_wrapper" :class="menuType?'':'fixedWidth'" :default-active="$route.path" unique-opened router :collapse="menuType" mode="vertical" background-color="#2f2d27" text-color="#fff" active-text-color="#5d9dff">
 		  	<template v-for="(item,index) in $router.options.routes" v-if="!item.hidden">
 		  		<el-submenu v-if="!item.leaf" :key="index" :index="index + ''">
 		  			<template slot="title">
@@ -32,15 +32,8 @@
 		mounted() {},
 		computed: {
 			...mapGetters([
-				'themeColor',
 				'menuType',
 			])
-		},
-		watch:{
-			themeColor:function(newValuw,oldValue) {
-				//这里面可以处理左侧aside跟主题颜色的映射关系
-				// console.log(newValuw,oldValue)
-			}
 		}
 	}
 </script>
@@ -48,7 +41,7 @@
 <style lang="scss" scoped="">
 	#aside_wrapper {
 		height:100%;
-    	background-color: #262b2f;
+    	background-color: #23221e;
     	overflow-y: auto;
     	overflow-x: hidden;
     	.logo_wrapper {

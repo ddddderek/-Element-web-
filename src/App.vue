@@ -7,9 +7,6 @@
 <script>
 export default {
   name: 'App',
-  mounted() {
-  	document.body.className = 'custom-20a0ff'
-  }
 }
 </script>
 

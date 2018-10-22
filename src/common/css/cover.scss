@@ -1,36 +1,87 @@
-@import '../theme/0000ff/index.css';
-@import '../theme/008000/index.css';
-@import '../theme/00a597/index.css';
-@import '../theme/20a0ff/index.css';
-@import '../theme/fa4f52/index.css';
+$--color-primary: #5d9dff;
+$--font-path: '../../../node_modules/element-ui/lib/theme-chalk/fonts';
+@import "../../../node_modules/element-ui/packages/theme-chalk/src/index";
 
-
-.el-menu {
-	.el-submenu {
-		.el-submenu__title {
-			height:46px;
-			line-height:46px;
-			span {
-				display:inline-block;
-				width:100px;
-				overflow:hidden;
-				text-overflow:ellipsis;
-			}
-		}
-	}
-	.el-menu-item {
-		height:46px;
-		line-height:46px;
-		span {
-			display:inline-block;
-			width:100px;
-			overflow:hidden;
-			text-overflow:ellipsis;
-		}
-	}
+// 表格用样式
+.common-table.el-table{
+  .success-row{
+    background-color:#f3f7ff;
+  }
+  .el-button--text{
+    padding: 0;
+    margin: 0 5px;
+  }
+  .line{
+    padding: 0 5px;
+  }
+  .common-table-header{
+    background-color: #f1f9fe;
+    font-size: 14px;
+    color: #333;
+    text-align: center;
+    th{
+      background-color: #f1f9fe;
+    }
+    .cell{
+      text-align: center;
+    }
+  }
+  .el-table__row .cell{
+    color: #666;
+    font-size: 14px;
+  }
 }
 
-.el-form.loginForm.el-form--label-top {
+// 分页器格式化
+.common-pagination.el-pagination{
+  text-align: center;
+  padding-top: 30px;
+  text-align: right;
+  .el-pagination__sizes, .el-pagination__total{
+    float: left;
+    margin-left: 0;
+  }
+  .el-pager{
+    .number, .btn-quickprev, .btn-quicknext{
+      margin-top: 2px;
+      min-width: 24px;
+      height: 24px;
+      line-height: 24px;
+      border: 1px solid #e3e6e6;
+      color: #666;
+      background-color: #fff;
+      &.active{
+        background: #f1f9fe;
+        color: #666;
+      }
+    }
+  }
+  .btn-prev{
+    margin-top: 2px;
+    padding: 0;
+    min-width: 24px;
+    height: 24px;
+    border: 1px solid #e3e6e6;
+    background-color: #fff;
+  }
+  .btn-next{
+    margin-top: 2px;
+    padding: 0;
+    min-width: 24px;
+    height: 24px;
+    border: 1px solid #e3e6e6;
+    background-color: #fff;
+  }
+  .el-pagination__sizes{
+    .el-input__inner{
+      width: 90px;
+      height: 24px;
+    }
+  }
+}
+
+// 登录页面表单格式化
+.loginForm.el-form.el-form--label-top, .registerForm.el-form.el-form--label-top {
 	.el-form-item.el-form-item--mini {
 		margin-bottom:12px;
 		.el-form-item__label {
@@ -69,3 +120,55 @@
 		}
 	}
 }
+
+// aside组件菜单样式格式化
+.el-menu {
+	.el-submenu {
+		.el-submenu__title {
+			height:46px;
+			line-height:46px;
+			span {
+				display:inline-block;
+				width:100px;
+				overflow:hidden;
+				text-overflow:ellipsis;
+			}
+		}
+    &.is-active{
+      .el-submenu__title{
+        &:before {
+          content: "";
+          width: 4px;
+          height: 46px;
+          background-color: #5d9dff;
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+      }
+    }
+  }
+	.el-menu-item.single-item{
+		height:46px;
+		line-height:46px;
+		span {
+			display:inline-block;
+			width:100px;
+			overflow:hidden;
+			text-overflow:ellipsis;
+		}
+    &.is-active{
+      &:before {
+          content: "";
+          width: 4px;
+          height: 46px;
+          background-color: #5d9dff;
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+    }
+	}
+}
+
+

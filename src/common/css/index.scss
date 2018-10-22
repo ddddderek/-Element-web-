@@ -1,2 +1,31 @@
 @import "./reset.scss";
 @import "./cover.scss";
+
+// 通用样式
+.common-box {
+    width: 100%;
+    margin-bottom: 10px;
+    background: #fff;
+    box-sizing: border-box;
+    .common-box-title {
+        height: 50px;
+        line-height: 50px;
+        box-sizing: border-box;
+        border: 1px solid #e4e4e4;
+        border-radius: 3px 3px 0 0;
+        color: #3b3b3b;
+        font-weight: bold;
+        font-size: 14px;
+        padding-left: 36px;
+        background: url(/static/images/common-box-title-bg.png) no-repeat 17px 20px #f8f8f8;
+    }
+    .common-box-body {
+        box-sizing: border-box;
+        border: 1px solid #e4e4e4;
+        border-top: none;
+        border-radius: 0 0 3px 3px;
+        background: #fff;
+        padding: 20px;
+        height: 100%;
+    }
+}
